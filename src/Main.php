@@ -32,7 +32,7 @@ class Main
         }
 
         $this->scriptName = "Day$dayName";
-        $this->scriptPath = __DIR__ . "/$year/$this->scriptName.php";
+        $this->scriptPath = __DIR__ . "/Y$year/$this->scriptName.php";
 
         if (!file_exists($this->scriptPath)) {
             throw new Exception("Script $this->scriptPath does not exist");
