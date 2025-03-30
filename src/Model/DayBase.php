@@ -9,6 +9,7 @@ Abstract class DayBase implements DayInterface
     protected const string WALL = '#';
     protected const string OBSTACLE = '#';
     protected const string FREE = '.';
+    protected const string ASTERISC = '*';
 
     protected array $data = [];
 
