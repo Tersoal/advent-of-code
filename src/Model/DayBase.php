@@ -11,6 +11,7 @@ Abstract class DayBase implements DayInterface
     protected const string FREE = '.';
     protected const string GROUND = '.';
     protected const string ASTERISC = '*';
+    protected const string UNKNOWN = '?';
 
     protected array $data = [];
 
