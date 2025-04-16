@@ -57,11 +57,11 @@ Abstract class DayBase implements DayInterface
         return $test1 === static::TEST_1 && $test2 === static::TEST_2;
     }
 
-    public function loadDataAsArrayMap(string $filePath): void
+    public function loadDataAsArrayMap(string $filePath, string $separator = "\r\n"): void
     {
         $data = file_get_contents($filePath);
         $data = str_replace(self::BOM,'', $data);
-        $data = explode("\r\n", $data);
+        $data = explode($separator, $data);
 
         $callback = fn(string $row): array => str_split($row);
         $this->data = array_map($callback, $data);
