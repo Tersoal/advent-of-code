@@ -8,7 +8,7 @@ class Day03 extends DayBase
 {
     protected const int TEST_1 = 4361;
     protected const int TEST_2 = 467835;
-    protected const string GEAR = self::ASTERISC;
+    protected const string GEAR = self::ASTERISK;
 
     protected array $directions = [
         [-1, 1], // Right-top
