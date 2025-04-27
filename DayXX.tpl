@@ -25,12 +25,12 @@ class DayXX extends DayBase
         ];
     }
 
-    private function getPart1(int $steps): int
+    private function getPart1(): int
     {
         return 0;
     }
 
-    private function getPart2(int $steps): int
+    private function getPart2(): int
     {
         return 0;
     }
