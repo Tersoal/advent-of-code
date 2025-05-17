@@ -14,6 +14,10 @@ Abstract class DayBase implements DayInterface
     protected const string UNKNOWN = '?';
     protected const string START_POSITION = 'S';
     protected const string POSITION = 'O';
+    protected const string DIRECTION_ARROW_TOP = '^';
+    protected const string DIRECTION_ARROW_BOTTOM = 'v';
+    protected const string DIRECTION_ARROW_RIGHT = '>';
+    protected const string DIRECTION_ARROW_LEFT = '<';
 
     protected array $data = [];
 
