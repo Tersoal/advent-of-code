@@ -12,8 +12,8 @@ if ($argc != 3) {
 $year = (int)$argv[1];
 $day = (int)$argv[2];
 
-if ($day < 0 || $day > 24) {
-    echo "Day must be 1 to 24, or 0 to create all days\n";
+if ($day < 0 || $day > 25) {
+    echo "Day must be 1 to 25, or 0 to create all days\n";
     exit(1);
 }
 
@@ -29,7 +29,7 @@ function createDataStructure(int $year, int $day): void
 
     $days = [$day];
     if ($day === 0) {
-        $days = range(1, 24);
+        $days = range(1, 25);
     }
 
     foreach ($days as $day) {
@@ -61,7 +61,7 @@ function createClassStructure(int $year, int $day): void
 
     $days = [$day];
     if ($day === 0) {
-        $days = range(1, 24);
+        $days = range(1, 25);
     }
 
     $classTplFilePath = __DIR__ . "/DayXX.tpl";
