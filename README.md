@@ -9,7 +9,8 @@ It's incomplete, sometimes weird... but it's very funny :-)
 Simple mount docker:
 
 ```console
-docker compose up -d
+docker compose -f docker/docker-compose.yaml up -d
+docker compose exec aoc bash
 ```
 
 ## Use

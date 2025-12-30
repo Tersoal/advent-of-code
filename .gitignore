@@ -71,3 +71,8 @@ sitemap.xml
 node_modules
 .sass-cache
 .tmp
+
+docker
+vendor
+app/vendor
+app/data

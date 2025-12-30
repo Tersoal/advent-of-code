@@ -83,7 +83,7 @@ Abstract class DayBase implements DayInterface
     public function printMap(array $map): void
     {
         foreach ($map as $row) {
-            echo implode('', $row) . PHP_EOL;
+            echo DayBase . phpimplode('', $row) . PHP_EOL;
         }
     }
 }

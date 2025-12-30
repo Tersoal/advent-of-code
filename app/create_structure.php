@@ -2,10 +2,10 @@
 
 namespace App;
 
-require_once 'autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 if ($argc != 3) {
-    echo "Execute command as: php app.php <year> <day>\n";
+    echo "Execute command as: `php create_structure.php <year> <day>`" . PHP_EOL;
     exit(1);
 }
 
@@ -13,7 +13,7 @@ $year = (int)$argv[1];
 $day = (int)$argv[2];
 
 if ($day < 0 || $day > 25) {
-    echo "Day must be 1 to 25, or 0 to create all days\n";
+    echo "Day must be 1 to 25, or 0 to create all days" . PHP_EOL;
     exit(1);
 }
 
@@ -64,7 +64,7 @@ function createClassStructure(int $year, int $day): void
         $days = range(1, 25);
     }
 
-    $classTplFilePath = __DIR__ . "/DayXX.tpl";
+    $classTplFilePath = __DIR__ . "/templates/DayXX.tpl";
     $classTplContent = file_get_contents($classTplFilePath);
 
     foreach ($days as $day) {

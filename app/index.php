@@ -2,10 +2,10 @@
 
 namespace App;
 
-require_once 'autoload.php';
+require __DIR__ . '/vendor/autoload.php';
 
 if ($argc != 4) {
-    echo "Execute command as: php app.php <year> <day> <test>\n";
+    echo "Execute command as: `php index.php <year> <day> <test>`" . PHP_EOL;
     exit(1);
 }
 
