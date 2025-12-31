@@ -11,5 +11,7 @@
             "name": "Tersoald20"
         }
     ],
-    "require": {}
+    "require": {
+      "ext-ctype": "*"
+    }
 }
