@@ -13,8 +13,10 @@ class DayXX extends DayBase
     {
         $this->loadDataAsArray($filePath, "\n");
 
-//        print_r($this->data);
-//        echo PHP_EOL;
+        if ($this->test) {
+            print_r($this->data);
+            echo PHP_EOL;
+        }
     }
 
     public function getResult(): array
