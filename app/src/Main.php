@@ -38,7 +38,7 @@ class Main
             throw new Exception("Script $this->scriptPath does not exist");
         }
 
-        require_once $this->scriptPath;
+//        require_once $this->scriptPath;
     }
 
     public function execute(): void
