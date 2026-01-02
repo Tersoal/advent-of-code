@@ -6,8 +6,8 @@ use App\Model\DayBase;
 
 class Day06 extends DayBase
 {
-    protected const int TEST_1 = 0;
-    protected const int TEST_2 = 0;
+    protected const string TEST_1 = '7,5,6,10,11';
+    protected const string TEST_2 = '19,23,23,29,26';
 
     public function loadData(string $filePath): void
     {
@@ -27,13 +27,38 @@ class Day06 extends DayBase
         ];
     }
 
-    private function getPart1(): int
+    private function getPart1(): string
     {
-        return 0;
+        $results = [];
+
+        foreach ($this->data as $line) {
+            $results[] = $this->getMarketFinalPosition($line, 4);
+        }
+
+        return implode(',', $results);
     }
 
-    private function getPart2(): int
+    private function getPart2(): string
     {
+        $results = [];
+
+        foreach ($this->data as $line) {
+            $results[] = $this->getMarketFinalPosition($line, 14);
+        }
+
+        return implode(',', $results);
+    }
+
+    private function getMarketFinalPosition(string $signal, int $markerLength): int
+    {
+        for ($i = 0; $i < strlen($signal); $i++) {
+            $marker = str_split(substr($signal, $i, $markerLength));
+
+            if (count(array_unique($marker)) === count($marker)) {
+                return $i + $markerLength;
+            }
+        }
+
         return 0;
     }
 }
