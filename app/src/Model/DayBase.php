@@ -18,6 +18,10 @@ Abstract class DayBase implements DayInterface
     protected const string DIRECTION_ARROW_BOTTOM = 'v';
     protected const string DIRECTION_ARROW_RIGHT = '>';
     protected const string DIRECTION_ARROW_LEFT = '<';
+    protected const string DIRECTION_RIGHT = 'R';
+    protected const string DIRECTION_LEFT = 'L';
+    protected const string DIRECTION_UP = 'U';
+    protected const string DIRECTION_DOWN = 'D';
 
     protected array $data = [];
 
