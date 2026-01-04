@@ -13,6 +13,7 @@ Abstract class DayBase implements DayInterface
     protected const string ASTERISK = '*';
     protected const string UNKNOWN = '?';
     protected const string START_POSITION = 'S';
+    protected const string END_POSITION = 'E';
     protected const string POSITION = 'O';
     protected const string DIRECTION_ARROW_TOP = '^';
     protected const string DIRECTION_ARROW_BOTTOM = 'v';
